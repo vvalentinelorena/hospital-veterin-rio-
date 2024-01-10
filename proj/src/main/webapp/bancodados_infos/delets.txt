@@ -1,0 +1,21 @@
+DELETE FROM secretario WHERE numCadastro = 3;
+
+DELETE FROM veterinario WHERE numCRMV = '8107';
+
+DELETE FROM estudante_auxiliar WHERE numCadastro = 1;
+
+DELETE FROM cliente WHERE numCadastro = 2;
+
+DELETE FROM animal WHERE numCadastro = 3;
+
+DELETE FROM medicamento WHERE idMedicamento = 3;
+
+DELETE FROM animal_alergias WHERE idMedicamento = 1 AND idAnimal = 2;
+
+DELETE FROM aparelho WHERE idAparelho = 1;
+
+DELETE FROM consulta WHERE numSala = 1 AND dataHora = '2023-06-19 10:30:00';  
+
+DELETE FROM internacao WHERE idInternacao = 3;
+
+DELETE FROM medicamentos_internacao WHERE idMedicamento = 2 AND idInternacao = 3;

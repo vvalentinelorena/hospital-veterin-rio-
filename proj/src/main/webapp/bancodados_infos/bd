@@ -1,0 +1,113 @@
+CREATE DATABASE hospitalveterinariodb;
+USE hospitalveterinariodb;
+
+CREATE TABLE animal (
+     numCadastro INT NOT NULL,
+     nome VARCHAR(100) NOT NULL,
+     numCadastroDono INT NOT NULL,
+     idade INT NOT NULL,
+     raca VARCHAR(60),
+     especie VARCHAR(60),
+     numCarteiraVac VARCHAR(15) NOT NULL,
+     PRIMARY KEY (numCadastro)
+);
+
+CREATE TABLE animal_alergias (
+     idMedicamento INT NOT NULL,
+     idAnimal INT NOT NULL,
+     nivelAlergia VARCHAR(10) NOT NULL,
+     PRIMARY KEY (idMedicamento, idAnimal)
+);
+
+CREATE TABLE cliente (
+     numCadastro INT NOT NULL,
+     nome VARCHAR(100) NOT NULL,
+     cpf VARCHAR(15) NOT NULL,
+     dataNas DATE NOT NULL,
+     telefone VARCHAR(15) NOT NULL,
+     contato VARCHAR(15) NOT NULL,
+     PRIMARY KEY (numCadastro)
+);
+
+
+CREATE TABLE veterinario (
+     numCRMV VARCHAR(5) NOT NULL,
+     nome VARCHAR(100) NOT NULL,
+     senha VARCHAR(50) NOT NULL,
+     faculdade VARCHAR(150) NOT NULL,
+     horarioAtendimento VARCHAR(45) NOT NULL,
+     PRIMARY KEY (numCRMV)
+);
+
+CREATE TABLE estudante_auxiliar (
+     numCadastro INT NOT NULL,
+     nome VARCHAR(100) NOT NULL,
+     faculdade VARCHAR(150) NOT NULL,
+     periodoFaculdade VARCHAR(15) NOT NULL,
+     horarioTrabalho VARCHAR(45) NOT NULL,
+     PRIMARY KEY (numCadastro)
+);
+
+CREATE TABLE secretario (
+     numCadastro INT NOT NULL,
+     nome VARCHAR(100) NOT NULL,
+     email VARCHAR(50) NOT NULL,
+     senha VARCHAR(50) NOT NULL,
+     PRIMARY KEY (numCadastro)
+);
+
+CREATE TABLE aparelho (
+     idAparelho INT NOT NULL,
+     nome VARCHAR(150) NOT NULL,
+     objetivoUso VARCHAR(60) NOT NULL,
+     PRIMARY KEY (idAparelho)
+);
+
+CREATE TABLE medicamento (
+     idMedicamento INT NOT NULL,
+     nome VARCHAR(150) NOT NULL,	
+     tipoMedicamento VARCHAR(60) NOT NULL,
+     instrumentoUso VARCHAR(60) NOT NULL,
+     PRIMARY KEY (idMedicamento)
+);
+
+CREATE TABLE consulta (
+     numSala INT NOT NULL,
+     dataHora DATETIME NOT NULL,
+     numCadastroAnimal INT NOT NULL,
+     numCRMVvet VARCHAR(5) NOT NULL,
+     numCadastroDono INT NOT NULL,
+     procedimento VARCHAR(200) NOT NULL,
+     PRIMARY KEY (numSala, dataHora)
+);
+
+CREATE TABLE internacao (
+     idInternacao INT NOT NULL,
+     numCadastroAnimal INT NOT NULL,
+     numCadastroDono INT NOT NULL,
+     registroAlimentacao VARCHAR(150) NOT NULL,
+     horarioVisita TIME NOT NULL,
+     duracaoInternacao VARCHAR(200) NOT NULL,
+     PRIMARY KEY (idInternacao)
+);
+
+CREATE TABLE medicamentos_internacao(
+     idInternacao INT NOT NULL,
+     idMedicamento INT NOT NULL,
+     nome VARCHAR(150) NOT NULL,
+     tipoMedicamento VARCHAR(60) NOT NULL,
+     instrumentoUso VARCHAR(60) NOT NULL,
+     PRIMARY KEY (idInternacao, idMedicamento)
+);
+
+
+
+=========================================================================================
+
+chaves de acesso:
+
+secretarios: 
+GF%qR$@Ggd
+
+veterinarios: 
+IS0!ceCPyq

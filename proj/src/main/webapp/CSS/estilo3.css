@@ -1,0 +1,19 @@
+
+
+.msgExcluir{   
+	margin: 0 auto;  
+	text-align: center; 
+	color: red;
+	font-weight:bolder;
+}
+
+.aviso{
+	margin: 0 auto;   
+	color: red;
+	font-weight:bolder;
+}
+
+.btnRes {
+	text-align: center;
+	margin-top: 30px;
+}

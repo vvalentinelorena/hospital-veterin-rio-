@@ -1,0 +1,21 @@
+SELECT numCadastro AS 'Id Secretário', nome FROM secretario;
+
+SELECT numCRMV AS 'CRMV do Veterinário', nome, horarioAtendimento AS 'Horário de Atendimento' FROM veterinario;
+
+SELECT numCadastro AS 'Id Estudante Auxiliar', nome, periodoFaculdade AS 'Período da Faculdade', horarioTrabalho AS 'Horário de Trabalho' FROM estudante_auxiliar;
+
+SELECT numCadastro AS 'Id do Cliente', nome, cpf, contato AS 'Telefone Principal' FROM cliente;
+
+SELECT numCadastro AS 'Id Animal', nome, raca AS 'Raça', especie AS 'Espécie' FROM animal;
+
+SELECT idMedicamento, nome AS 'Nome do Medicamento', tipoMedicamento AS 'Tipo de Medicamento', instrumentoUso AS 'Instrumento de Uso' FROM medicamento;
+
+SELECT idAparelho AS 'Id do Aparelho', nome, objetivoUso AS 'Objetivo de Uso' FROM aparelho;
+
+SELECT idInternacao AS 'Id da Internação', numCadastroAnimal AS 'Id Animal Internado', numCadastroDono AS 'Id Dono do Animal', duracaoInternacao AS 'Duração da Internação', horarioVisita AS 'Horário de Visita' FROM internacao;
+
+SELECT idMedicamento AS 'Id do Medicamento', idAnimal AS 'Id do Animal alérgico', nivelAlergia AS 'Gravidade da Alergia' FROM animal_alergias;
+
+SELECT numSala AS 'Sala da Consulta', dataHora AS 'Data de Agendamento', numCadastroAnimal AS 'Id do Animal Internado', numCadastroDono AS 'Id dono do animal', numCRMVvet AS 'CRMV Veterinário responsável', procedimento FROM consulta;
+
+SELECT idInternacao AS 'Id da Internação', idMedicamento AS 'Id do Medicamento', nome AS 'Nome do medicamento receitado' FROM medicamentos_internacao;

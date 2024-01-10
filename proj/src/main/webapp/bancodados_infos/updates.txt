@@ -1,0 +1,21 @@
+UPDATE secretario set nome = 'Leandro Rios', email = 'RiosLl.RL50505@gmail.com' WHERE numCadastro = 3;
+
+UPDATE veterinario SET nome= 'José Santos', horarioAtendimento = '13h às 22h' WHERE numCRMV = '5029';
+
+UPDATE estudante_auxiliar SET periodoFaculdade = '4° Semestre' WHERE numCadastro = 1;
+
+UPDATE cliente SET telefone = '(16) 3357-8800', contato = '(16) 9978-15566' WHERE numCadastro = 2;
+
+UPDATE animal SET especie = 'Cachorro', raca = 'Labrador' WHERE numCadastro = 3;
+
+UPDATE medicamento SET nome = 'Analgésico Aliv', tipoMedicamento = 'Ingestão oral', instrumentoUso = 'Seringa' WHERE idMedicamento = 1;
+
+UPDATE aparelho SET nome = 'Tira de Urina', objetivoUso ='Observar irregularidades na urina do animal examinado' WHERE idAparelho = 3;
+
+UPDATE internacao SET duracaoInternacao = '2 dias', registroAlimentacao = 'ração - peixe - água - frango' WHERE idInternacao = 2;
+
+UPDATE animal_alergias SET nivelAlergia = 'Leve' WHERE idMedicamento = 1 AND idAnimal = 1;
+
+UPDATE consulta SET procedimento = 'Examinar características anormais na urina e fezes do animal' WHERE numSala = 1 AND dataHora = '2023-06-20 18:00:00';
+
+UPDATE medicamentos_internacao SET nome='Analgésico Aliv', tipoMedicamento = 'Ingestão oral', instrumentoUso = 'Seringa' WHERE idInternacao = 2 AND idMedicamento = 1;

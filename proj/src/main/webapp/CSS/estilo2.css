@@ -1,0 +1,130 @@
+/* estiliza pags iniciais do secretario e do veterinario */
+
+*{
+	margin: 0;
+	font-family: Raleway, sans-serif;
+	padding: 0;
+}
+
+
+.menuLateral{
+	background-color: #67c9e0;
+	width: 300px;
+	height: 100%;
+	position: fixed;
+	left:-300px;
+	top: 30px;
+	transition: left 0.5s;
+}
+
+.menuLateral .titulo{
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	line-height: 45px;
+	font-size: 24px;
+	border-bottom: 5px solid #98c400;
+}
+
+
+.menuLateral ul{
+	list-style: none;
+}
+
+.menuLateral ul li{
+	line-height: 40px;
+}
+
+.menuLateral ul li a{
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	padding-left: 30px;
+	font-weight: bold;
+	display: block;
+	
+}
+
+.menuLateral ul li a:hover{
+	background-color: #87CEFA;
+	transition: 0.5s;
+}
+
+.menuLateral ul ul li a{
+	font-size: 16px;
+	font-weight: 300;
+	padding-left: 60px;
+}
+
+.menuLateral ul ul{
+	display: none;
+}
+
+.menuLateral ul .itensVeterinarios.mostra{
+	display: block;
+}
+.menuLateral ul .itensAuxiliares.mostra{
+	display: block;
+}
+.menuLateral ul .itensClientes.mostra{
+	display: block;
+}
+.menuLateral ul .itensMedicamentos.mostra{
+	display: block;
+}
+.menuLateral ul .itensAparelhos.mostra{
+	display: block;
+}
+
+
+.menuLateral ul .itensAnimais.mostra{
+	display: block;
+}
+
+.menuLateral ul .itensAlergias.mostra{
+	display: block;
+}
+
+.menuLateral ul .itensConsultas.mostra{
+	display: block;
+}
+.menuLateral ul .itensInternacoes.mostra{
+	display: block;
+}
+
+.btnAbre{
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	cursor: pointer;
+}
+
+.btnAbre span{
+	font-size: 35px;
+}
+
+.menuLateral.mostra{
+	left: 0;
+}
+
+.btnFecha{
+	position: relative;
+	left: 5px;
+	border: 3px solid #98c400;
+	width: 30px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.btnFecha:hover{
+	border: 3px solid white;
+}
+
+.menuLateral ul li a span{
+	padding-left: 10px;
+
+}
+
+.aviso{
+	color: red;
+}

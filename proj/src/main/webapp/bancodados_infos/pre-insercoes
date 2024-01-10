@@ -1,0 +1,46 @@
+
+INSERT INTO secretario (numCadastro, nome, email, senha) VALUES (1, 'Eliana Nascimento', 'Eliana.N.872@gmail.com', 'xx334xxx5');
+INSERT INTO secretario (numCadastro, nome, email, senha) VALUES (2, 'Vanessa Castro', 'VaneCstr.1256@gmail.com', 'vncrtro88300');
+INSERT INTO secretario (numCadastro, nome, email, senha) VALUES (3, 'Leandro Ribeiro', 'Ribeiro.RL50505@gmail.com', 'lerlam55111');
+
+
+INSERT INTO veterinario (numCRMV, nome, senha, faculdade, horarioAtendimento) VALUES ('5029', 'Vanuza Hamada', 'vnhiio088099', 'UFSCAR', '07h �s 15h');
+INSERT INTO veterinario (numCRMV, nome, senha, faculdade, horarioAtendimento) VALUES ('8107', 'Leonardo Peres', 'LP30@gghsi000', 'UNICEP', '15h �s 22hh');
+INSERT INTO veterinario (numCRMV, nome, senha, faculdade, horarioAtendimento) VALUES ('1510', 'Clarisse Dutra', 'class90xx5090.3', 'USP', '09h �s 17h');
+
+INSERT INTO estudante_auxiliar (numCadastro, nome, faculdade, periodoFaculdade, horarioTrabalho) VALUES (1, 'Catarina Amaral', 'UNIARA', '2� semestre', '11h �s 14h');
+INSERT INTO estudante_auxiliar (numCadastro, nome, faculdade, periodoFaculdade, horarioTrabalho) VALUES (2, 'Ros�ngela Zanetti', 'UNICAMP', '4� semestre', '16h �s 20h');
+INSERT INTO estudante_auxiliar (numCadastro, nome, faculdade, periodoFaculdade, horarioTrabalho) VALUES (3, 'Bruno Higashi', 'UNESP', '3� semestre', '18h �s 22h');
+
+INSERT INTO cliente (numCadastro, nome, cpf, dataNas, telefone, contato) VALUES (1, 'Teodoro Dias', '440.609.278-13', '2000-02-05', '(16) 3391-8688', '(16) 9978-60888');
+INSERT INTO cliente (numCadastro, nome, cpf, dataNas, telefone, contato) VALUES (2, 'Rafael Guimar�es', '496.646.078-60', '1998-08-30', '(16) 9918-78901', '(16) 9977-89091');
+INSERT INTO cliente (numCadastro, nome, cpf, dataNas, telefone, contato) VALUES (3, 'Ester Belchior', '228.233.128-11', '1980-01-19', '(16) 9976-13236', '(16) 3367-4235');
+
+INSERT INTO medicamento (idMedicamento, nome, tipoMedicamento, instrumentoUso) VALUES (1, 'Antit�xico Duprat', 'Oral - L�quido', 'Seringa');
+INSERT INTO medicamento (idMedicamento, nome, tipoMedicamento, instrumentoUso) VALUES (2, 'Anti�cido Agener', 'Oral - P�lula', 'Aplicador de Comprimido');
+INSERT INTO medicamento (idMedicamento, nome, tipoMedicamento, instrumentoUso) VALUES (3, 'Anti-inflamat�rio Zoetis', 'Oral - P�lula', 'Aplicador de Comprimido');
+
+INSERT INTO aparelho (idAparelho, nome, objetivoUso) VALUES (1, 'Aplicador de Comprimido', 'Facilitar a aplica��o oral de subst�ncias em p�lulas');
+INSERT INTO aparelho (idAparelho, nome, objetivoUso) VALUES (2, 'Seringa', 'Facilitar a aplica��o oral de subst�ncias em liqu�dos');
+INSERT INTO aparelho (idAparelho, nome, objetivoUso) VALUES (3, 'Agulha calibre 21', 'Realizar a aplica��o de vacinas');
+
+INSERT INTO animal (numCadastro, nome, numCadastroDono, idade, raca, especie, numCarteiraVac) VALUES (1, 'Amy', 1, 3, 'Persa', 'Gato', '6648916515');
+INSERT INTO animal (numCadastro, nome, numCadastroDono, idade, raca, especie, numCarteiraVac) VALUES (2, 'Ozzy', 3, 5, 'Doberman', 'Cachorro', '9461894984');
+INSERT INTO animal (numCadastro, nome, numCadastroDono, idade, raca, especie, numCarteiraVac) VALUES (3, 'Freddie', 3, 1, 'Siam�s', 'Gato', '8964631668');
+
+INSERT INTO animal_alergias (idMedicamento, idAnimal, nivelAlergia) VALUES (3, 1, 'Grave');
+INSERT INTO animal_alergias (idMedicamento, idAnimal, nivelAlergia) VALUES (1, 1, 'Moderado');
+INSERT INTO animal_alergias (idMedicamento, idAnimal, nivelAlergia) VALUES (1, 2, 'Baixo');
+
+INSERT INTO consulta (numSala, dataHora, numCadastroAnimal, numCRMVvet, numCadastroDono, procedimento) VALUES (1, '2023-06-19 10:30:00', 2, '5029', 3, 'Avalia��o Geral - Checkup');
+INSERT INTO consulta (numSala, dataHora, numCadastroAnimal, numCRMVvet, numCadastroDono, procedimento) VALUES (1, '2023-06-20 18:00:00', 3, '8107', 3, 'Verificar necessidade de vacina��o');
+INSERT INTO consulta (numSala, dataHora, numCadastroAnimal, numCRMVvet, numCadastroDono, procedimento) VALUES (3, '2023-06-19 15:45:00', 1, '5029', 1, 'Avalia��o - animal com irregularidade alimentar');
+
+INSERT INTO internacao (idInternacao, numCadastroAnimal, numCadastroDono, registroAlimentacao, horarioVisita, duracaoInternacao) VALUES (1, 1, 1, 'carne - ra��o - frango', '18:30:00', '1 dia');
+INSERT INTO internacao (idInternacao, numCadastroAnimal, numCadastroDono, registroAlimentacao, horarioVisita, duracaoInternacao) VALUES (2, 3, 3, 'ra��o - fruta', '13:00:00', '12 horas');
+INSERT INTO internacao (idInternacao, numCadastroAnimal, numCadastroDono, registroAlimentacao, horarioVisita, duracaoInternacao) VALUES (3, 2, 3, 'frango', '16:00:00', '5 horas');
+
+INSERT INTO medicamentos_internacao (idInternacao, idMedicamento, nome, tipoMedicamento, instrumentoUso) VALUES (3, 2, 'Anti�cido Agener', 'Oral - P�lula', 'Aplicador de Comprimido');
+INSERT INTO medicamentos_internacao (idInternacao, idMedicamento, nome, tipoMedicamento, instrumentoUso) VALUES (1, 3, 'Anti-inflamat�rio Zoetis', 'Oral - P�lula', 'Aplicador de Comprimido');
+INSERT INTO medicamentos_internacao (idInternacao, idMedicamento, nome, tipoMedicamento, instrumentoUso) VALUES (2, 1, 'Antit�xico Duprat', 'Oral - L�quido', 'Seringa');
+ 
